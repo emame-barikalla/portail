@@ -13,7 +13,7 @@ import java.util.Optional;
 @Api("API pour les opérations CRUD sur les declaration.")
 @RestController
 @RequestMapping("/api/declaration")
-@CrossOrigin(origins = "http://localhost:4200/")
+@CrossOrigin(origins = "http://localhost:4200/",allowCredentials="true")
 public class DeclarationController {
 
     private final IDeclarationService ideclarationservice;
@@ -23,7 +23,7 @@ public class DeclarationController {
         this.ideclarationservice = ideclarationservice;
     }
     @ApiOperation(value = "Récupère la liste des declarations ")
-    @GetMapping
+    @GetMapping("/all")
     public List<Declaration> findAlldeclaration() {
         return ideclarationservice.findAlldeclarations();
     }
@@ -44,7 +44,7 @@ public class DeclarationController {
         return ideclarationservice.updatedeclaration(declaration);
     }
     @ApiOperation(value = "supprimer une declaration  ")
-    @DeleteMapping("/{id}")
+    @DeleteMapping("delete/{id}")
     public void deleteById(@PathVariable Long id) {
         ideclarationservice.deletedeclaration(id);
     }

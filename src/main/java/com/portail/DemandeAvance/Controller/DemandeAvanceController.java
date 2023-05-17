@@ -11,7 +11,7 @@ import java.util.Optional;
 @Api("API pour les opérations CRUD sur les demandes d'avance.")
 @RestController
 @RequestMapping("/api/demandeavance")
-@CrossOrigin(origins = "http://localhost:4200/")
+@CrossOrigin(origins = "http://localhost:4200/",allowCredentials="true")
 
 public class DemandeAvanceController {
     private final IDemandeService IDemandeService;

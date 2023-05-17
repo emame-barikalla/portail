@@ -11,7 +11,7 @@ import java.util.Optional;
 @Api("API pour les opérations CRUD sur les demandes de modification.")
 @RestController
 @RequestMapping("/api/demandemodification")
-@CrossOrigin(origins = "http://localhost:4200/")
+@CrossOrigin(origins = "http://localhost:4200/",allowCredentials="true")
 
 public class DemandeModifController {
     private final IDemandeService IDemandeService;

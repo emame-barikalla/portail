@@ -11,7 +11,7 @@ import java.util.Optional;
 @Api("API pour les opérations CRUD sur les demandes de conge.")
 @RestController
 @RequestMapping("/api/demandeconge")
-@CrossOrigin(origins = "http://localhost:4200/")
+@CrossOrigin(origins = "http://localhost:4200/",allowCredentials="true")
 
 public class DemandeCongeController {
     private final IDemandeService IDemandeService;
@@ -19,7 +19,7 @@ public class DemandeCongeController {
         this.IDemandeService = IDemandeService;
     }
     @ApiOperation(value = "Récupère la liste des demandes ")
-    @GetMapping
+    @GetMapping("/all")
     public List<DemandeConge> findAllDemandes() {
         return IDemandeService.findAllDemandes();
     }
@@ -39,7 +39,7 @@ public class DemandeCongeController {
         return IDemandeService.updateDemande(demandeConge);
     }
     @ApiOperation(value = "supprimer une demande ")
-    @DeleteMapping("/{id}")
+    @DeleteMapping("delete/{id}")
     public void deletedemande(@PathVariable("id") Long id) {
         IDemandeService.deletedemande(id);
     }

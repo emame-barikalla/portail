@@ -1,7 +1,7 @@
 package com.portail.DemandeAvance.Service;
 
 import com.portail.DemandeAvance.Entity.DemandeAvance;
-import com.portail.DemandeAvance.Repository.DemandeAttestationRepository;
+import com.portail.DemandeAvance.Repository.DemandeAvanceRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,8 +9,8 @@ import java.util.Optional;
 
 @Service
 public class DemandeAvanceService implements IDemandeService {
-    private final DemandeAttestationRepository repos;
-    public DemandeAvanceService(DemandeAttestationRepository repos) {
+    private final DemandeAvanceRepository repos;
+    public DemandeAvanceService(DemandeAvanceRepository repos) {
         this.repos = repos;
     }
     @Override

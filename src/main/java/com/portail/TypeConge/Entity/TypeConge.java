@@ -21,7 +21,7 @@ public class TypeConge implements Serializable {
     @Column(name = "libelle")
     private String libelle;
 
-   @ManyToOne(cascade = CascadeType.ALL)
-    private DemandeConge demandeconge;
+ /*  @ManyToOne(cascade = CascadeType.ALL)
+    private DemandeConge demandeconge;*/
 
 }

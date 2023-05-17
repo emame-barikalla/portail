@@ -24,8 +24,8 @@ public class DemandeConge implements Serializable {
     private Long demandeId;
     @Column(name = "type_conge_id")
     private Long typecongeid;
-    @Column(name = "login")
-    private String login;
+    @Column(name = "username")
+    private String username;
     @Column(name = "date_debut")
     
     private LocalDate dateDebut;
@@ -38,9 +38,11 @@ public class DemandeConge implements Serializable {
     @Enumerated(EnumType.STRING)
     @Column(name = "statut")
     private Statut statut;
-    @OneToMany(mappedBy = "demandeconge", fetch = FetchType.LAZY)
-    private List<TypeConge> typeconge = new ArrayList<>();
+   /* @OneToMany(mappedBy = "demandeconge", fetch = FetchType.LAZY)
 
+    private List<TypeConge> typeconge = new ArrayList<>();
+    private Set<Role> roles = new HashSet<>();
+*/
 
 
 }

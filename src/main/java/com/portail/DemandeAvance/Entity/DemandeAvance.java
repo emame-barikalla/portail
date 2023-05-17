@@ -20,8 +20,8 @@ public class DemandeAvance implements Serializable {
     @Column(name = "demande_id",nullable=false)
     private Long demandeId;
 
-    @Column(name = "login")
-    private String login;
+    @Column(name = "username")
+    private String username;
     @Column(name = "montant")
     private String montant;
     @Column(name = "date_demande")

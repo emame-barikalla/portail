@@ -12,6 +12,7 @@ import java.util.Optional;
 @Api("API pour les opérations CRUD sur les types de conge.")
 @RestController
 @RequestMapping("/api/typeconge")
+@CrossOrigin(origins = "http://localhost:4200/",allowCredentials="true")
 public class TypeCongeController {
 
     private final ITypeService itypeService;
